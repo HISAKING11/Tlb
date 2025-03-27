@@ -122,3 +122,29 @@ body, html {
     visibility: hidden;
     pointer-events: none;
 }
+
+/* Logo Container (Bottom Right Corner) */
+.logo-container {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background: rgba(46, 45, 45, 0.322);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
