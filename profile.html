@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="john.css">
+    <link rel="stylesheet" href="jane.css">
+    
+</head>
+<body>
+
+    <div class="profiles">
+        <!-- John Doe Profile -->
+        <div class="profile-container-john" onclick="toggleProfile('profile-details-john')">
+            <img src="./img/profile1.jpg" alt="John Doe" class="profile-photo">
+            <div class="profile-info">
+                <h2>John Doe</h2>
+                <p>Web Developer</p>
+            </div>
+            <div class="profile-details-john" id="profile-details-john">
+                <p>📍 Location: Venglai Tlabung, Lunglei, Mizoram</p>
+                <p>📧 Email: rsp@tlabung.in</p>
+                <p>📞 Phone: +91 9362300392</p>
+            </div>
+        </div>
+
+        <!-- Jane Smith Profile -->
+        <div class="profile-container-jane" onclick="toggleProfile('profile-details-jane')">
+            <img src="./img/profile2.jpg" alt="Jane Smith" class="profile-photo">
+            <div class="profile-info">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+            </div>
+            <div class="profile-details-jane" id="profile-details-jane">
+                <p>📍 Location: Bazar Tlabung, Lunglei, Mizoram</p>
+                <p>📧 Email: din@tlabung.in</p>
+                <p>📞 Phone: +91  8974704293</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleProfile(profileId) {
+            var profileDetails = document.getElementById(profileId);
+
+            // Toggle the 'expanded' class only for the clicked profile
+            if (profileDetails.classList.contains("expanded")) {
+                profileDetails.classList.remove("expanded");
+            } else {
+                profileDetails.classList.add("expanded");
+            }
+        }
+    </script>
+
+</body>
+</html>
